@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.layout{
+    background-image: url('/src/assets/images/bg-sidebar-mobile.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+.body{
+   position: relative;
+}
+.content{
+    position: absolute;
+    top: 30%;
+}
+
+
+@media screen and (min-width:580px) {
+    body{
+        display: none;
+    }
+    .layout{
+        background-image: none;
+    }
+}
