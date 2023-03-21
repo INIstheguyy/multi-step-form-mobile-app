@@ -15,6 +15,9 @@ body{
     position: absolute;
     top: 30%;
 }
+.layout-body{
+    width: 375px;
+}
 
 
 @media screen and (min-width:580px) {
