@@ -1,8 +1,11 @@
+import YourPlan from "../components/YourPlan";
+import React from "react";
+
 const SecondSlide = () => {
   return (
-    <div>
-      <h2>Second Slide</h2>
-    </div>
+    <React.Fragment>
+      <YourPlan/>
+    </React.Fragment>
   );
 };
 
