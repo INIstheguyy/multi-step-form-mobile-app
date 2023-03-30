@@ -5,7 +5,7 @@ const FirstSlide = () => {
   return (
     <React.Fragment>
     <div>
-    <YourInfo />
+    <YourInfo  />
     </div>
     </React.Fragment>
   );

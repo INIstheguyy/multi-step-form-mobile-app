@@ -1,10 +1,10 @@
 import YourPlan from "../components/YourPlan";
 import React from "react";
 
-const SecondSlide = () => {
+const SecondSlide = ({ planType, setPlanType }) => {
   return (
     <React.Fragment>
-      <YourPlan/>
+      <YourPlan planType={planType} setPlanType={setPlanType} />
     </React.Fragment>
   );
 };

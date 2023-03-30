@@ -1,7 +1,9 @@
+import Addons from "../components/Addons";
+
 const ThirdSlide = () => {
     return ( 
         <div>
-        <h2>Third Slide</h2>
+        <Addons/>
         </div>
      );
 }
