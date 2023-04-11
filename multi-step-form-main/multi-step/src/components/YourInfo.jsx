@@ -1,4 +1,12 @@
-const YourInfo = () => {
+import { useState, useEffect } from 'react';
+const YourInfo = ({ setIsFormValid }) => {
+  const [name, setName] = useState("");
+  const [phoneNumber , setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    setIsFormValid(name !== "" && phoneNumber !== "" && email !== "");
+  }, [name, phoneNumber, email, setIsFormValid]);
 
 return ( 
     <div className=" p-8">
@@ -7,15 +15,28 @@ return (
       <form action="">
       <div className="py-1">
         <label  for="" className=" font-semibold text-gray-500 py-1 block">  Name</label>
-        <input type="text" placeholder="e.g. Stephen King" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 form-input" required />
+        <input type="text"
+         placeholder="e.g. Stephen King"
+         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 form-input"
+         value={name}
+         onChange={(e) => setName(e.target.value)}
+         />
       </div>
       <div className="py-1">
-        <label  for="" className=" font-semibold text-gray-500 py-1 block">Email Address</label> form-input
-        <input type="email" placeholder="e.g. stephenking@lorem.com" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 form-input" required />
+        <label  for="" className=" font-semibold text-gray-500 py-1 block">Email Address</label> 
+        <input type="email"
+         placeholder="e.g. stephenking@lorem.com"
+         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 form-input"
+         value={email}
+         onChange={(e) => setEmail(e.target.value)}/>
       </div>
       <div className="py-1">
         <label  for="" className=" font-semibold text-gray-500 py-1 block">Phone Number</label>
-        <input type="number" placeholder="e.g. +1 234 567 890" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 form-input" required/>
+        <input type="number"
+         placeholder="e.g. +1 234 567 890"
+         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 form-input" 
+         value={phoneNumber}
+         onChange={(e) => setPhoneNumber(e.target.value)}/>
       </div>
     </form>
     </div>

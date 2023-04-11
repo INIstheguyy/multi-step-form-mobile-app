@@ -1,12 +1,12 @@
 import React from "react";
 import YourInfo from "../components/YourInfo";
 
-const FirstSlide = () => {
+const FirstSlide = ({ isFormValid, setIsFormValid }) => {
   return (
     <React.Fragment>
-    <div>
-    <YourInfo  />
-    </div>
+      <div>
+        <YourInfo isFormValid={isFormValid} setIsFormValid={setIsFormValid} />
+      </div>
     </React.Fragment>
   );
 };
