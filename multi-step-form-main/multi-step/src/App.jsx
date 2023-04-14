@@ -26,7 +26,7 @@ function App() {
     button={
       
       <div>
-      {page === 1 && <Button1 nextPage={() => {setPage(page + 1) }}  disable={!isFormValid} />}
+      {page === 1 && <Button1 nextPage={() => {setPage(page + 1) }}  isFormValid={isFormValid} />}
       {(page === 2 || page === 3) && <Button0 nextPage={() => setPage(page + 1)} PreviousPage={() => setPage(page - 1) } />}
       {(page === 4 ) && <Button10 nextPage={() => setPage(page + 1)} PreviousPage={() => setPage(page - 1)} />}
       </div>
