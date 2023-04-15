@@ -12,7 +12,7 @@ const YourPlan = ({ planType, setPlanType }) => {
                 <p className="py-1 pb-5 text-gray-500">You have the option of monthly or yearly billing.</p>
             </div>
             <div className="mb-4">
-                <div className=" flex  py-2 my-1 border-2 pl-2 rounded-lg cursor-pointer">
+                <div onClick={() => console.log('clicked')} className=" flex  py-2 my-1 border-2 pl-2 rounded-lg cursor-pointer">
                     <img src={arcade} alt="" />
                     <div className=" ml-5">
                         <h3 className=" text-blue-900 font-bold">Arcade</h3>
@@ -20,7 +20,7 @@ const YourPlan = ({ planType, setPlanType }) => {
                         <p className="text-sm font-medium text-blue-800">{planType === "monthly" ? "" : "2 months free"}</p>
                     </div>
                 </div>
-                <div className=" flex  py-2 my-1 border-2 pl-2 rounded-lg cursor-pointer">
+                <div onClick={() => console.log('clicked')} className=" flex  py-2 my-1 border-2 pl-2 rounded-lg cursor-pointer">
                     <img src={advanced} alt="" />
                     <div className=" ml-5">
                         <h3  className=" text-blue-900 font-bold">Advanced</h3>
@@ -28,7 +28,7 @@ const YourPlan = ({ planType, setPlanType }) => {
                         <p className="text-sm font-medium text-blue-800">{planType === "monthly" ? "" : "2 months free"}</p>
                     </div>
                 </div>
-                <div className=" flex  py-2 my-1 border-2 pl-2 rounded-lg cursor-pointer">
+                <div onClick={() => console.log('clicked')} className=" flex  py-2 my-1 border-2 pl-2 rounded-lg cursor-pointer">
                     <img src={pro} alt="" />
                     <div className=" ml-5">
                         <h3  className=" text-blue-900 font-bold">Pro</h3>

@@ -8,12 +8,15 @@ import './index.css';
 import FirstSlide from './pages/FirstSlide'
 import SecondSlide from './pages/SecondSlide'
 import ThirdSlide from './pages/ThirdSlide'
+import FourthSlide from './pages/FourthSlide';
 
 
 function App() {
   const [page, setPage] = useState(1)
   const [planType, setPlanType] = useState("monthly")
   const [isFormValid, setIsFormValid] = useState(false)
+  const [selectedPlan, setSelectedPlan] = useState("");
+  const [selectedAddons, setSelectedAddons] = useState([]);
  
   return (
     <BackgroundLayout 
@@ -21,7 +24,8 @@ function App() {
     children={<div>
       {page === 1 && <FirstSlide  isFormValid={isFormValid} setIsFormValid={setIsFormValid} />}
       {page === 2 && <SecondSlide planType={planType} setPlanType={setPlanType} />}
-      {page === 3 && <ThirdSlide/>}
+      {page === 3 && <ThirdSlide setSelectedPlan={setSelectedPlan} setSelectedAddons={setSelectedAddons} />}
+      {page === 4 && <FourthSlide selectedPlan={selectedPlan} selectedAddons={selectedAddons} />}
     </div>}
     button={
       

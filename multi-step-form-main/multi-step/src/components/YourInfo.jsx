@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react';
 const YourInfo = ({ setIsFormValid }) => {
-  const [name, setName] = useState("");
-  const [phoneNumber , setPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState(localStorage.getItem('name') || '');
+  const [phoneNumber, setPhoneNumber] = useState(localStorage.getItem('phoneNumber') || '');
+  const [email, setEmail] = useState(localStorage.getItem('email') || '');
   const [showNameError, setShowNameError] = useState(false);
   const [showPhoneError, setShowPhoneError] = useState(false);
   const [showEmailError, setShowEmailError] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('name', name);
+    localStorage.setItem('phoneNumber', phoneNumber);
+    localStorage.setItem('email', email);
+  }, [name, phoneNumber, email]);
 
   const validateInputs = () => {
     const isNameValid = name.trim() !== "";
