@@ -1,28 +1,28 @@
 export const pricing = {
     "arcade": {
-      "monthly": 9,
-      "yearly": 90
+      "monthly": `$9/mo`,
+      "yearly": `$90/yr`
     }, 
     "advanced": {
-      "monthly": 12,
-      "yearly": 120
+      "monthly": `$12/mo`,
+      "yearly": `$120/yr`
     },     "pro": {
-      "monthly": 15,
-      "yearly": 150
+      "monthly": `$15/mo`,
+      "yearly": `$150/yr`
     }, 
   }
 
   export const addons = {
-    "online-service": {
-      "monthly": 1,
-      "yearly": 10
+    "onlineservice": {
+      "monthly": `$1/mo`,
+      "yearly": `$10/yr`
     },
-    "Larger storage": {
-      "monthly": 2,
-      "yearly": 20
+    "Largerstorage": {
+      "monthly": `$2/mo`,
+      "yearly": `$20/yr`
     },
-    "Customizable profile": {
-      "monthly": 2,
-      "yearly": 20
+    "Customizableprofile": {
+      "monthly": `$2/mo`,
+      "yearly": `$20/yr`
     }
   }

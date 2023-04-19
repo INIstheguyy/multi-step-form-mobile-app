@@ -1,4 +1,6 @@
-const Addons = ({selectedAddons, setSelectedAddons}) => {
+import { addons } from "../consts/pricing";
+
+const Addons = ({selectedAddons, setSelectedAddons, planType, setPlanType}) => {
     return ( 
         <div className="">
         
@@ -29,7 +31,9 @@ const Addons = ({selectedAddons, setSelectedAddons}) => {
                         <h2 className=" text-sm font-bold text-gray-700"> Online Services</h2>
                         <p className=" text-xs font-light text-gray-400"> Access to multiplayer games</p>
                     </div>
-                    <div></div>
+                    <div>
+                        <p className = " text-xs text-purple-600 font-bold mt-2 " >{planType === "monthly" ? `${addons.onlineservice.monthly}` : `${addons.onlineservice.yearly}`}</p>
+                    </div>
                 </div>
                 <div onClick={() => {
                     if(!selectedAddons.includes("larger-storage")) {
@@ -53,7 +57,9 @@ const Addons = ({selectedAddons, setSelectedAddons}) => {
                         <h2 className=" text-sm font-bold text-gray-700"> Larger Storage</h2>
                         <p className=" text-xs font-light text-gray-400"> Extra 1TB of cloud save</p>
                     </div>
-                    <div></div>
+                    <div>
+                    <p className = " text-xs text-purple-600 font-bold mt-2 " >{planType === "monthly" ? `${addons.Largerstorage.monthly}` : `${addons.Largerstorage.yearly}`}</p>
+                    </div>
                 </div>
                 <div onClick={() => {
                     if(!selectedAddons.includes("customizable-service")) {
@@ -70,14 +76,16 @@ const Addons = ({selectedAddons, setSelectedAddons}) => {
                         if(!selectedAddons.includes("customizable-service")) {
                           setSelectedAddons([...selectedAddons, "customizable-service"])
                         } else {
-                          setSelectedAddons(selectedAddons.filter(addon => addon !== "customizable-service"))
+                          setSelectedAddons(selectedAddons.filter(addon => addon !== "customizable-service/"))
                         }
                       }}  />
                     <div className="">
                         <h2 className=" text-sm font-bold text-gray-700"> Customizable Profile</h2>
                         <p className=" text-xs font-light text-gray-400"> Custom theme on your profile</p>
                     </div>
-                    <div></div>
+                    <div>
+                    <p className = " text-xs text-purple-600 font-bold mt-2 " >{planType === "monthly" ? `${addons.Customizableprofile.monthly}` : `${addons.Customizableprofile.yearly}`}</p>
+                    </div>
                 </div>
             </div>
         </div>

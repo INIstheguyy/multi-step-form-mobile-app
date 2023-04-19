@@ -24,8 +24,8 @@ function App() {
     children={<div>
       {page === 1 && <FirstSlide  isFormValid={isFormValid} setIsFormValid={setIsFormValid} />}
       {page === 2 && <SecondSlide planType={planType} setPlanType={setPlanType} selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} />}
-      {page === 3 && <ThirdSlide selectedAddons={selectedAddons} setSelectedAddons={setSelectedAddons}  />}
-      {page === 4 && <FourthSlide selectedPlan={selectedPlan} planType={planType} />}
+      {page === 3 && <ThirdSlide selectedAddons={selectedAddons} setSelectedAddons={setSelectedAddons} planType={planType} setPlanType={setPlanType}  />}
+      {page === 4 && <FourthSlide selectedPlan={selectedPlan} selectedAddons={selectedAddons} planType={planType} />}
     </div>}
     button={
       

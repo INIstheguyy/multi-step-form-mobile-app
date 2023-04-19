@@ -2,11 +2,11 @@ import React from "react";
 import FinishUp from "../components/FinishUp";
 
 
-const FourthSlide = ({ selectedPlan, planType }) => {
+const FourthSlide = ({ selectedPlan, selectedAddons,planType }) => {
     return ( 
         <React.Fragment>
             <div>
-                <FinishUp selectedPlan={selectedPlan} planType={planType}></FinishUp>
+                <FinishUp selectedAddons={selectedAddons} selectedPlan={selectedPlan} planType={planType}></FinishUp>
             </div>
         </React.Fragment> 
         );
