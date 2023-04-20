@@ -14,9 +14,9 @@ import FourthSlide from './pages/FourthSlide';
 function App() {
   const [page, setPage] = useState(1)
   const [planType, setPlanType] = useState("monthly")
-  const [selectedPlan, setSelectedPlan] = useState("")
+  const [selectedPlan, setSelectedPlan] = useState("arcade")
   const [isFormValid, setIsFormValid] = useState(false)
-  const [selectedAddons, setSelectedAddons] = useState([]);
+  const [selectedAddons, setSelectedAddons] = useState(["onlineservice", "largerstorage"]);
  
   return (
     <BackgroundLayout 
@@ -24,7 +24,7 @@ function App() {
     children={<div>
       {page === 1 && <FirstSlide  isFormValid={isFormValid} setIsFormValid={setIsFormValid} />}
       {page === 2 && <SecondSlide planType={planType} setPlanType={setPlanType} selectedPlan={selectedPlan} setSelectedPlan={setSelectedPlan} />}
-      {page === 3 && <ThirdSlide selectedAddons={selectedAddons} setSelectedAddons={setSelectedAddons} planType={planType} setPlanType={setPlanType}  />}
+      {page === 3 && <ThirdSlide selectedAddons={selectedAddons} setSelectedAddons={setSelectedAddons} planType={planType}  />}
       {page === 4 && <FourthSlide selectedPlan={selectedPlan} selectedAddons={selectedAddons} planType={planType} />}
     </div>}
     button={

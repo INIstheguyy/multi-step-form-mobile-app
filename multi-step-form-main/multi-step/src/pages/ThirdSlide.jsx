@@ -1,9 +1,9 @@
 import Addons from "../components/Addons";
 
-const ThirdSlide = ({selectedAddons, setSelectedAddons, planType, setPlanType}) => {
+const ThirdSlide = ({selectedAddons, setSelectedAddons, planType, }) => {
     return ( 
         <div>
-        <Addons selectedAddons={selectedAddons} setSelectedAddons={setSelectedAddons} planType={planType} setPlanType={setPlanType} />
+        <Addons selectedAddons={selectedAddons} setSelectedAddons={setSelectedAddons} planType={planType}  />
         </div>
      );
 }

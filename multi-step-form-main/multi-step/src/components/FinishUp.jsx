@@ -1,6 +1,10 @@
 import { addons, pricing } from "./../consts/pricing";
 
 const FinishUp = ({ selectedPlan, selectedAddons,planType }) => {
+    let total = pricing[selectedPlan][planType];
+
+    selectedAddons.forEach(addon => total += addons[addon][planType]);
+
     return ( 
         <div  className=" p-8">
             <h2 className=" text-2xl font-bold text-blue-800 ">Finishing up</h2>
@@ -12,9 +16,17 @@ const FinishUp = ({ selectedPlan, selectedAddons,planType }) => {
                 </div>
                 <hr />
                 <div className="addons">
-                    <h5>{selectedAddons}</h5>
-                    <p>{`${addons[selectedAddons][planType]}`}</p>
+                    {selectedAddons.map((addon) =>                         
+                        (
+                            <div>
+                            <p>{addon}</p>
+                            <p>{`${addons[addon][planType]}`}</p>
+                            </div>
+                        )
+                    )}
                 </div>
+
+                <p>Total per ({planType}) is {total}</p>
             </div>
         </div>
      );

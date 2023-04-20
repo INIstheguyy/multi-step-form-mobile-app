@@ -1,6 +1,6 @@
 import { addons } from "../consts/pricing";
 
-const Addons = ({selectedAddons, setSelectedAddons, planType, setPlanType}) => {
+const Addons = ({selectedAddons, setSelectedAddons, planType, }) => {
     return ( 
         <div className="">
         
@@ -9,22 +9,22 @@ const Addons = ({selectedAddons, setSelectedAddons, planType, setPlanType}) => {
         <p className="py-3 pb-5 text-gray-500">Add-ons help enhance your gaming experience.</p>
             <div>
                 <div onClick={() => {
-                    if(!selectedAddons.includes("online-service")) {
-                        setSelectedAddons([...selectedAddons, "online-service"])
+                    if(!selectedAddons.includes("onlineservice")) {
+                        setSelectedAddons([...selectedAddons, "onlineservice"])
                     } else {
-                        setSelectedAddons(selectedAddons.filter(addon => addon !== "online-service"))
+                        setSelectedAddons(selectedAddons.filter(addon => addon !== "onlineservice"))
                     }
-                }} className={`flex justify-around my-2 border-2 rounded-md py-2 ${ selectedAddons.includes("online-service") ? 'border-blue-900' : 'border-gray-300'}`}>
+                }} className={`flex cursor-pointer justify-around my-2 border-2 rounded-md py-2 ${ selectedAddons.includes("onlineservice") ? 'border-blue-900' : 'border-gray-300'}`}>
                     <input
                      type="checkbox" 
                      name="" 
                      id=""
-                      checked={selectedAddons.includes("online-service")}
+                      checked={selectedAddons.includes("onlineservice")}
                       onChange={() => {
-                        if(!selectedAddons.includes("online-service")) {
-                          setSelectedAddons([...selectedAddons, "online-service"])
+                        if(!selectedAddons.includes("onlineservice")) {
+                          setSelectedAddons([...selectedAddons, "onlineservice"])
                         } else {
-                          setSelectedAddons(selectedAddons.filter(addon => addon !== "online-service"))
+                          setSelectedAddons(selectedAddons.filter(addon => addon !== "onlineservice"))
                         }
                       }}  />
                     <div className="">
@@ -36,21 +36,21 @@ const Addons = ({selectedAddons, setSelectedAddons, planType, setPlanType}) => {
                     </div>
                 </div>
                 <div onClick={() => {
-                    if(!selectedAddons.includes("larger-storage")) {
-                        setSelectedAddons([...selectedAddons, "larger-storage"])
+                    if(!selectedAddons.includes("largerstorage")) {
+                        setSelectedAddons([...selectedAddons, "largerstorage"])
                     } else {
-                        setSelectedAddons(selectedAddons.filter(addon => addon !== "larger-storage"))
+                        setSelectedAddons(selectedAddons.filter(addon => addon !== "largerstorage"))
                     }
-                }} className={`flex justify-around my-2 border-2 rounded-md py-2 ${ selectedAddons.includes("larger-storage") ? 'border-blue-900' : 'border-gray-300'}`}>
+                }} className={`flex cursor-pointer justify-around my-2 border-2 rounded-md py-2 ${ selectedAddons.includes("largerstorage") ? 'border-blue-900' : 'border-gray-300'}`}>
                     <input
                      type="checkbox"
                       name="" id=""
-                       checked={selectedAddons.includes("larger-storage")}
+                       checked={selectedAddons.includes("largerstorage")}
                        onChange={() => {
-                        if(!selectedAddons.includes("larger-storage")) {
-                          setSelectedAddons([...selectedAddons, "larger-storage"])
+                        if(!selectedAddons.includes("largerstorage")) {
+                          setSelectedAddons([...selectedAddons, "largerstorage"])
                         } else {
-                          setSelectedAddons(selectedAddons.filter(addon => addon !== "larger-storage"))
+                          setSelectedAddons(selectedAddons.filter(addon => addon !== "largerstorage"))
                         }
                       }}  />
                     <div className="">
@@ -58,25 +58,25 @@ const Addons = ({selectedAddons, setSelectedAddons, planType, setPlanType}) => {
                         <p className=" text-xs font-light text-gray-400"> Extra 1TB of cloud save</p>
                     </div>
                     <div>
-                    <p className = " text-xs text-purple-600 font-bold mt-2 " >{planType === "monthly" ? `${addons.Largerstorage.monthly}` : `${addons.Largerstorage.yearly}`}</p>
+                    <p className = " text-xs text-purple-600 font-bold mt-2 " >{planType === "monthly" ? `${addons.largerstorage.monthly}` : `${addons.largerstorage.yearly}`}</p>
                     </div>
                 </div>
                 <div onClick={() => {
-                    if(!selectedAddons.includes("customizable-service")) {
-                        setSelectedAddons([...selectedAddons, "customizable-service"])
+                    if(!selectedAddons.includes("customizableprofile")) {
+                        setSelectedAddons([...selectedAddons, "customizableprofile"])
                     } else {
-                        setSelectedAddons(selectedAddons.filter(addon => addon !== "customizable-service"))
+                        setSelectedAddons(selectedAddons.filter(addon => addon !== "customizableprofile"))
                     }
-                }} className={`flex justify-around my-2 border-2 rounded-md py-2 ${ selectedAddons.includes("customizable-service") ? 'border-blue-900' : 'border-gray-300'}`}>
+                }} className={`flex cursor-pointer justify-around my-2 border-2 rounded-md py-2 ${ selectedAddons.includes("customizableprofile") ? 'border-blue-900' : 'border-gray-300'}`}>
                     <input
                      type="checkbox"
                       name="" id="" 
-                      checked={selectedAddons.includes("customizable-service")}
+                      checked={selectedAddons.includes("customizableprofile")}
                       onChange={() => {
-                        if(!selectedAddons.includes("customizable-service")) {
-                          setSelectedAddons([...selectedAddons, "customizable-service"])
+                        if(!selectedAddons.includes("customizableprofile")) {
+                          setSelectedAddons([...selectedAddons, "customizableprofile"])
                         } else {
-                          setSelectedAddons(selectedAddons.filter(addon => addon !== "customizable-service/"))
+                          setSelectedAddons(selectedAddons.filter(addon => addon !== "customizableprofile"))
                         }
                       }}  />
                     <div className="">
@@ -84,7 +84,7 @@ const Addons = ({selectedAddons, setSelectedAddons, planType, setPlanType}) => {
                         <p className=" text-xs font-light text-gray-400"> Custom theme on your profile</p>
                     </div>
                     <div>
-                    <p className = " text-xs text-purple-600 font-bold mt-2 " >{planType === "monthly" ? `${addons.Customizableprofile.monthly}` : `${addons.Customizableprofile.yearly}`}</p>
+                    <p className = " text-xs text-purple-600 font-bold mt-2 " >{planType === "monthly" ? `${addons.customizableprofile.monthly}` : `${addons.customizableprofile.yearly}`}</p>
                     </div>
                 </div>
             </div>
