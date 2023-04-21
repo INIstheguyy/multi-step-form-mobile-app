@@ -36,7 +36,7 @@ return (
       <p className="py-1  text-gray-500">Please provide your name, email address, and phone number.</p>
       <form action="">
       <div className="">
-        <label  for="" className=" font-semibold text-gray-500  text-sm block">  Name</label>
+        <label className=" font-semibold text-gray-500  text-sm block">  Name</label>
         {showNameError && <p className="text-red-600 text-sm">Please fill in the Name.</p>}
         <input type="text"
          placeholder="e.g. Stephen King"
@@ -46,7 +46,7 @@ return (
          />
       </div>
       <div className="">
-        <label  for="" className=" font-semibold text-gray-500 py-1  text-sm block">Email Address</label> 
+        <label className=" font-semibold text-gray-500 py-1  text-sm block">Email Address</label> 
         {showEmailError && (  <p className="text-red-600 text-sm">Please enter a valid email address.</p> )}
         <input type="email"
          placeholder="e.g. stephenking@lorem.com"
@@ -55,7 +55,7 @@ return (
          onChange={(e) => {setEmail(e.target.value); validateInputs()}}/>
       </div>
       <div className="">
-        <label  for="" className=" font-semibold text-gray-500 py-1 text-sm block">Phone Number</label>
+        <label className=" font-semibold text-gray-500 py-1 text-sm block">Phone Number</label>
         {showPhoneError && ( <p className="text-red-600 text-sm">Please fill in the phone Number.</p>)}
         <input type="number"
          placeholder="e.g. +1 234 567 890"

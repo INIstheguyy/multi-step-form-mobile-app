@@ -14,9 +14,9 @@ import FourthSlide from './pages/FourthSlide';
 function App() {
   const [page, setPage] = useState(1)
   const [planType, setPlanType] = useState("monthly")
-  const [selectedPlan, setSelectedPlan] = useState("arcade")
+  const [selectedPlan, setSelectedPlan] = useState("Arcade")
   const [isFormValid, setIsFormValid] = useState(false)
-  const [selectedAddons, setSelectedAddons] = useState(["onlineservice", "largerstorage"]);
+  const [selectedAddons, setSelectedAddons] = useState(["Online-service", "Larger-storage"]);
  
   return (
     <BackgroundLayout 
